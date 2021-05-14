@@ -7,9 +7,9 @@
 
 A tool to modify the theme of the aerfaying community website.
 
-![Preview #1](images/ss1.png)
-![Preview #2](images/ss2.png)
-![Preview #3](images/ss3.png)
+![Preview #1](https://raw.githubusercontent.com/Tim-Fang/Dark-Aerfaying-Theme/master/images/ss1.png)
+![Preview #2](https://raw.githubusercontent.com/Tim-Fang/Dark-Aerfaying-Theme/master/images/ss2.png)
+![Preview #3](https://raw.githubusercontent.com/Tim-Fang/Dark-Aerfaying-Theme/master/images/ss3.png)
 
 Currently in development, only support partal dark theme.
 
