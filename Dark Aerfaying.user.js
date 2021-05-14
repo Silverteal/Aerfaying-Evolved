@@ -7,7 +7,7 @@
 // @match        *://*.aerfaying.com/*
 // @match        *://*.gitblock.cn/*
 // @grant        GM_addStyle
-// @updateURL    https://gitee.com/TimFangDev/DAT/raw/master/Dark%20Aerfaying.user.js
+// @updateURL    https://github.com/Tim-Fang/Dark-Aerfaying-Theme/raw/master/Dark%20Aerfaying.user.js
 // ==/UserScript==
 
 (function () {
