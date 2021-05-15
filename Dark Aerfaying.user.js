@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Dark Aerfaying
 // @namespace    https://gitee.com/TimFangDev
-// @version      1.5
+// @version      1.6
 // @description  Dark Aerfaying Theme User JS
 // @author       TimFang4162
 // @match        *://*.aerfaying.com/*
@@ -1052,6 +1052,56 @@ ul.menu-bar_main-nav_97WYO {
 
 
 `);
+  var url = window.location.href;
+  if (url.search("/Admin/Reports") != -1) {
+    console.log("In report center, add css");
+    GM_addStyle(`
+.user-info_wrapper_2acbL {
+  color: #eee !important;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background: #4c97ff !important;
+  transition: none !important;
+}
+.btn-primary {
+  border: 1px solid #fff3 !important;
+}
+.panel-top-bar_body_1OptA .search-group > * {
+  border-color: #fff3 !important;
+}
+.btn-default {
+  border: 1px solid #fff3 !important;
+}
+.table-striped > tbody > tr:nth-of-type(2n + 1) {
+  background-color: #1e2227 !important;
+}
+a {
+  color: #eee !important;
+}
+.btn-outline-primary {
+  color: #fff !important;
+  border-color: #fff3 !important;
+  background-color: #0D1117 !important;
+}
+.btn-outline-primary:hover {
+  background-color: #4C97FF !important;
+}
+.dropdown .dropdown-menu {
+  border: 1px solid #fff3 !important;
+}
+.reports_nav_1SVZ3 {
+  color: #888 !important;
+}
+.responsive-table_head_2zj6E th {
+  color: #fff !important;
+}
+.footer-bar-full-screen_wrapper_1EVW- {
+  display: none !important;
+}
+`);
+  }
   var a = document.getElementsByClassName("stat-graph_day-0_idJxi");
   var imgsrc =
     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY/j//z8DAAj8Av6IXwbgAAAAAElFTkSuQmCC";
