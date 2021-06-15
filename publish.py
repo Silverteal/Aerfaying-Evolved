@@ -19,9 +19,7 @@ outputfile.close()
 
 
 os.system("git add .")
-print("[INFO] Commit info: Update" +
-      time.strftime("%Y%m%d-%H%M%S", time.localtime()))
-os.system("git commit -m '"+time.strftime("%Y%m%d-%H%M%S", time.localtime())+"'")
+os.system('git commit -m "'+time.strftime("%Y%m%d-%H%M%S", time.localtime())+'"')
 print("[INFO] Uploading files")
 os.system("git push")
 print("[INFO] Push success")
