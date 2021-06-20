@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Dark Aerfaying
 // @namespace    https://gitee.com/TimFangDev
-// @version      1.6
+// @version      1.7
 // @description  Dark Aerfaying Theme User JS
 // @author       TimFang4162
 // @match        *://*.aerfaying.com/*
@@ -751,14 +751,12 @@ blockquote {
 .custom-procedures_button-row_3EJDk button {
   background: #1d2026 !important;
 }
-
 .prompt_body_Vgt8G {
   background: var(--bgc1) !important;
 }
 .prompt_button-row_34Zss button {
   background: #1d2026 !important;
 }
-
 .prompt_variable-name-text-input_36E65 {
   color: #fff !important;
   background: #1d2026 !important;
@@ -1057,20 +1055,15 @@ ul.menu-bar_main-nav_97WYO {
 }
 .comment-panel_comment-panel_3pBsc form textarea:focus {
   min-height: 200px !important;
-  transition: all cubic-bezier(0.86, 0, 0.07, 1) 0.15s !important;
+  transition: all ease-in-out 300ms !important;
 }
 .comment-panel_comment-panel_3pBsc form textarea {
-  transition: all cubic-bezier(0.86, 0, 0.07, 1) 0.15s !important;
+  transition: all ease-in-out 300ms !important;
+  transition-delay: 300ms !important;
 }
 .items-guide_card_QYkCd {
   background: var(--bgc2) !important;
   box-shadow: 0 2px 10px #000 !important;
-}
-.blocklySvg text,
-.blocklyBlockDragSurface text,
-.blocklyFlyout text,
-.blocklyToolboxDiv text {
-  fill: var(--textc) !important;
 }
 .share-card_body_T97RJ {
   background: var(--bgc1a) !important;
@@ -1094,6 +1087,28 @@ ul.menu-bar_main-nav_97WYO {
 }
 .sidebar-nav_wrapper_1VUBP .sidebar-nav_navigations_1X4Qe {
   box-shadow: 0 0 8px #00000080 !important;
+}
+ul.dropdown-menu{
+  background-color: #06090f !important;
+}
+.studio-home_handleInfo_3DAit > ul > li > :not(.btn .btn-group) {
+  color: #888;
+}
+.studio-home_handleInfo_3DAit > ul > li > label, .btn {
+  color: var(--textc) !important;
+}
+.studio-manage_card_2Wh_z {
+  background-color: var(--bgc2) !important;
+}
+.backpack_backpack-header_Vteeu {
+  background-color: var(--bgc2) !important;
+  color: var(--textc) !important;
+}
+.backpack_backpack-item > nav > div{
+  color: var(--textc) !important;
+}
+.sound-editor_button_28oLj {
+  background-color: var(--bgc1) !important;
 }
 `);
   var url = window.location.href;
@@ -1143,7 +1158,8 @@ a {
 }
 .footer-bar-full-screen_wrapper_1EVW- {
   display: none !important;
-}`);
+}
+`);
   }
   var a = document.getElementsByClassName("stat-graph_day-0_idJxi");
   var imgsrc =
