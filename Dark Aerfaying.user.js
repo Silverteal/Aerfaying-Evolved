@@ -1110,6 +1110,13 @@ ul.dropdown-menu{
 .sound-editor_button_28oLj {
   background-color: var(--bgc1) !important;
 }
+.forum-post-view_mask_2Ct5B {
+  background: linear-gradient(hsla(0,0%,100%,0),var(--bgc2)) !important;
+}
+.event-component_wrapper_T9bjV > i {
+  border: none !important;
+  background-color: #AAA !important;
+}
 `);
   var url = window.location.href;
   if (url.search("/Admin/Reports") != -1) {
