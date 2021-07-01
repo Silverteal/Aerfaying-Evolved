@@ -1171,4 +1171,29 @@ a {
   for (b = 0; b < a.length; b++) {
     a[b].src = imgsrc;
   }
+  if (url.search("/Users") != -1) {
+    console.log("In user home, verify redlist");
+    var libraLib = {
+      isInList: function (id) {
+        $.ajax({
+          url: "https://www.scpo.top:1120/v2",
+          data: {
+            method: "isInList",
+            platform: "acamp",
+            format: "id",
+            value: id,
+          },
+          success: function (result) {
+            console.log(result);
+            if (result["message"] == "success") {
+              if (result["status"] == true) {
+                alert("此人在红名单中,原因是:\n" + result["reason"]);
+              }
+            }
+          },
+        });
+      },
+    };
+    libraLib.isInList(url.split("/")[4]);
+  }
 })();
