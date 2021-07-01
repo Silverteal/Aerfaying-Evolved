@@ -15,4 +15,4 @@ Currently in development, only support partal dark theme.
 
 ## Installation
 
-You need to install a user script loader like Tampermonkey or Greasymonkey, then [Install userscript here](https://gitee.com/TimFangDev/DAT/raw/master/Dark%20Aerfaying.user.js)
+You need to install a user script loader like Tampermonkey or Greasymonkey, then [Install userscript here](https://github.com/Tim-Fang/Dark-Aerfaying-Theme/raw/master/Dark%20Aerfaying.user.js)
