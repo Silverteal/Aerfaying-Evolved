@@ -1,13 +1,15 @@
 // ==UserScript==
 // @name         Dark Aerfaying
-// @namespace    https://gitee.com/TimFangDev
-// @version      1.8
+// @namespace    https://github.com/Tim-Fang
+// @version      1.9
 // @description  Dark Aerfaying Theme User JS
 // @author       TimFang4162
 // @match        *://*.aerfaying.com/*
 // @match        *://*.gitblock.cn/*
+// @match        *://*.ccw.site/*
 // @grant        GM_addStyle
 // @updateURL    https://github.com/Tim-Fang/Dark-Aerfaying-Theme/raw/master/Dark%20Aerfaying.user.js
+// @require      https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js
 // ==/UserScript==
 
 (function () {
@@ -1117,6 +1119,71 @@ ul.dropdown-menu{
   border: none !important;
   background-color: #AAA !important;
 }
+
+/* ccw */
+
+.menu-bar_menu-bar_JcuHF {
+  background-color: var(--bgc1) !important;
+}
+.gui_body-wrapper_-N0sA {
+  background-color: var(--bgc1) !important;
+}
+.gui_tab_27Unf.gui_is-selected_sHAiu {
+  background-color: var(--bgc2) !important;
+}
+.gui_tab_27Unf:hover {
+  background-color: var(--bgc2) !important;
+}
+.gui_tab_27Unf {
+  background-color: var(--bgc2) !important;
+}
+.backpack_backpack-header_6ltCS {
+  background: var(--bgc2);
+  color: var(--textc) !important;
+}
+.stage-header_stage-button_hkl9B {
+  background: var(--bgc2) !important;
+}
+.sprite-info_sprite-info_3EyZh {
+  background-color: var(--bgc1) !important;
+  border-bottom: 1px solid var(--bgc2) !important;
+}
+.sprite-selector_scroll-wrapper_3NNnc {
+  background: var(--bgc1) !important;
+}
+.sprite-selector_sprite-selector_2KgCX {
+  background-color: var(--bgc2) !important;
+}
+.stage-selector_header_2GVr1, .stage-selector_stage-selector_3oWOr {
+  background-color: var(--bgc1) !important;
+}
+.input_input-form_l9eYg {
+  color: var(--textc) !important;
+  background: var(--bgc2) !important;
+}
+.modal_modal-overlay_1Lcbx {
+  background-color: var(--bgc1a) !important;
+  backdrop-filter: var(--bgf) !important;
+}
+.modal_header_1h7ps {
+  background-color: #1d2026 !important;
+}
+.custom-procedures_body_SQBv6 {
+  background: var(--bgc1) !important;
+}
+.custom-procedures_option-card_BtHt3 {
+  background: #1D2026 !important;
+  color: var(--textc) !important;
+}
+.prompt_body_18Z-I {
+  background: var(--bgc1) !important;
+}
+.prompt_variable-name-text-input_1iu8- {
+  color: var(--textc) !important;
+  background: #1d2026 !important;
+}
+
+
 `);
   var url = window.location.href;
   if (url.search("/Admin/Reports") != -1) {
@@ -1168,32 +1235,13 @@ a {
 }
 `);
   }
-  var a = document.getElementsByClassName("stat-graph_day-0_idJxi");
-  var imgsrc =
-    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY/j//z8DAAj8Av6IXwbgAAAAAElFTkSuQmCC";
-  for (var b = 0; b < a.length; b++) {
-    a[b].src = imgsrc;
-  }
-  a = document.getElementsByClassName("stat-graph_day-1_3GeeK");
-  for (b = 0; b < a.length; b++) {
-    a[b].src = imgsrc;
-  }
-  a = document.getElementsByClassName("stat-graph_day-2_WowYZ");
-  for (b = 0; b < a.length; b++) {
-    a[b].src = imgsrc;
-  }
-  a = document.getElementsByClassName("stat-graph_day-3_36etr");
-  for (b = 0; b < a.length; b++) {
-    a[b].src = imgsrc;
-  }
-  a = document.getElementsByClassName("stat-graph_day-4_3XS42");
-  for (b = 0; b < a.length; b++) {
-    a[b].src = imgsrc;
-  }
-  a = document.getElementsByClassName("");
-  for (b = 0; b < a.length; b++) {
-    a[b].src = imgsrc;
-  }
+  $(
+    "[src='https://cdn.gitblock.cn/static/images/776e7636933f5be6ab8bd9eb5334ba3d.png']"
+  ).attr(
+    "src",
+    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY/j//z8DAAj8Av6IXwbgAAAAAElFTkSuQmCC"
+  );
+
   if (url.search("/Users") != -1) {
     console.log("In user home, verify redlist");
     var libraLib = {
