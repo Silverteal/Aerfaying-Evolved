@@ -1,13 +1,16 @@
 // ==UserScript==
 // @name         Dark Aerfaying
 // @namespace    https://github.com/Tim-Fang
-// @version      1.9
+// @version      2.0
 // @description  Dark Aerfaying Theme User JS
 // @author       TimFang4162
 // @match        *://*.aerfaying.com/*
 // @match        *://*.gitblock.cn/*
 // @match        *://*.ccw.site/*
 // @grant        GM_addStyle
+// @grant        GM_setValue
+// @grant        GM_getValue
+// @grant        GM_listValues
 // @updateURL    https://github.com/Tim-Fang/Dark-Aerfaying-Theme/raw/master/Dark%20Aerfaying.user.js
 // @require      https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js
 // ==/UserScript==
@@ -1186,6 +1189,25 @@ ul.dropdown-menu{
 
 `);
   var url = window.location.href;
+  if (GM_getValue("DAT_domain", null) == null) {
+    if (url.search("gitblock.cn") != -1) {
+      GM_setValue("DAT_domain", "gitblock");
+    }
+    if (url.search("aerfaying.com") != -1) {
+      GM_setValue("DAT_domain", "aerfaying");
+    }
+  }
+  console.log(GM_listValues());
+  if (GM_getValue("DAT_domain") == "aerfaying") {
+    if (url.search("gitblock.cn") != -1) {
+      window.location.assign(window.location.href.replace("gitblock.cn", "aerfaying.com"));
+    }
+  }
+  if (GM_getValue("DAT_domain") == "gitblock") {
+    if (url.search("aerfaying.com") != -1) {
+      window.location.assign(window.location.href.replace("aerfaying.com", "gitblock.cn"));
+    }
+  }
   if (url.search("/Admin/Reports") != -1) {
     console.log("In report center, add css");
     GM_addStyle(`;
