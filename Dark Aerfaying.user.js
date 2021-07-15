@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Dark Aerfaying
 // @namespace    https://github.com/Tim-Fang
-// @version      2.0
+// @version      2.1
 // @description  Dark Aerfaying Theme User JS
 // @author       TimFang4162
 // @match        *://*.aerfaying.com/*
@@ -1122,8 +1122,16 @@ ul.dropdown-menu{
   border: none !important;
   background-color: #AAA !important;
 }
+.user-forum-posts_wrapper_vB-WA {
+  background-color: var(--bgc2) !important;
+  width: 65% !important;
+}
+
+
 
 /* ccw */
+
+
 
 .menu-bar_menu-bar_JcuHF {
   background-color: var(--bgc1) !important;
@@ -1185,8 +1193,111 @@ ul.dropdown-menu{
   color: var(--textc) !important;
   background: #1d2026 !important;
 }
-
-
+.container-19gjB {
+  background-color: var(--bgc1) !important;
+}
+.wrapper-3474e {
+  background-color: var(--bgc1) !important;
+}
+.input-37PPL > input {
+  background-color: var(--bgc2) !important;
+  color: var(--textc) !important;
+}
+.focus-HH0Ip {
+  color: var(--textc) !important;
+}
+.thirdPartyTitle-3Icbt > span {
+  background-color: var(--bgc2) !important;
+}
+.title-1x6gJ {
+  color: var(--textc) !important;
+}
+.container-1KOYd {
+  background-color: var(--bgc2) !important;
+}
+.extraItem-lstHT {
+  color: #888 !important;
+}
+.content-OsM4r {
+  background-color: var(--bgc2) !important;
+}
+.footer-e0Syp {
+  background-color: var(--bgc2) !important;
+}
+.title-2b0u7 > span{
+  color: #BBB !important;
+}
+.origin-ab9bh, .reposted-1zvgf {
+  background-color: var(--bgc2) !important;
+}
+.arrowTop-2Fru_ {
+  background-color: var(--bgc2) !important;
+}
+.title-cUpGy, .notionList-1x9JR {
+  background-color: var(--bgc2) !important;
+}
+.content-3Klgd {
+  border-bottom-color: #888 !important;
+}
+.header-background-1Malb {
+  background-color: var(--bgc1) !important;
+}
+.user-select-3I_OX {
+  background-color: var(--bgc1) !important;
+}
+.name-8FNxo {
+  color: var(--textc) !important;
+}
+.search-3rjMu {
+  background-color: var(--bgc2) !important;
+  color: var(--textc)
+}
+.discoverTagItem-PAYVw {
+  background-color: var(--bgc2) !important;
+}
+.container-1b1zf {
+  background-color: var(--bgc2) !important;
+}
+.headLeft-CY-mp > span {
+  color: var(--textc) !important;
+}
+.replyCreation-1qr2S {
+  background-color: var(--bgc2) !important;
+}
+.replyCreationHead-17tqk > span {
+  color: #4f4dd2 !important;
+}
+.container-3tI-s {
+  background-color: var(--bgc2) !important;
+}
+.creationTitle-3SxBi > span{
+  color: #4f4dd2 !important;
+}
+.container-2iC-t {
+  background-color: var(--bgc2) !important;
+}
+.studentName-3rrbp {
+  color: #4f4dd2 !important;
+}
+.recommend-1s-HQ {
+  display: none;
+}
+.container-2Mm1d {
+  background-color: var(--bgc2) !important;
+}
+.leftContent-3zu6j :first-child {
+  color: #4f4dd2 !important;
+}
+/* CCW 创造者学院 */
+.gh-head {
+  background-color: var(--bgc1) !important;
+}
+.gh-head-student-info-container {
+  background-color: var(--bgc1) !important;
+}
+.gh-head-student-info-name {
+  color: var(--textc) !important;
+}
 `);
   var url = window.location.href;
   if (GM_getValue("DAT_domain", null) == null) {
