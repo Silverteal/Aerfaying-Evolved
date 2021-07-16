@@ -1288,7 +1288,72 @@ ul.dropdown-menu{
 .leftContent-3zu6j :first-child {
   color: #4f4dd2 !important;
 }
+.logout-3hTAg > img {
+  filter: invert(0.8);
+}
+.personalInfo-15TiZ, .tabWrapper-2mhvI, .tab-1njza, .exhibitionCreationHead-3PiSI, .container-2m0Lv, .container-3tI-s, .introduction-jkWDj, .comments-3I40W, .c-floor-in-floor {
+  background-color: var(--bgc2) !important;
+}
+.bio-3uLlr > input {
+  background-color: var(--bgc2) !important;
+  color: var(--textc) !important;
+}
+.bioDisplay-3PigT > p {
+  color: var(--textc) !important;
+}
+.name-n9cKI > span {
+  color: var(--textc) !important;
+}
+.studentTitle-ki3-F > span {
+  background-color: var(--bgc2) !important;
+}
+.c-author {
+  color: #4f4dd2 !important;
+}
+.c-comment-content {
+  color: var(--textc) !important;
+}
+.c-textareaWrapper, .c-textarea {
+  background-color: var(--bgc2) !important;
+  color: var(--textc) !important;
+  font-family: "Microsoft Yahei", Arial, PingFang !important;
+}
+.c-emoji {
+  background-color: var(--bgc2) !important;
+}
+.c-emoji-header {
+  background-color: #7175f5 !important;
+}
+.c-textarea {
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+  transition-delay: 300ms;
+}
+.c-textarea:focus {
+  height: 200px !important;
+  transition-delay: 0s;
+}
+.content-2IGDF {
+  background-color: var(--bgc2) !important;
+}
+.title-2Lzjd :last-child {
+  color: #4f4dd2 !important;
+}
+.tabContentWrapper-37KNg, .tab-2fo7S {
+  background-color: var(--bgc2) !important;
+}
+.list-1QOpS {
+  background-color: var(--bgc2) !important;
+}
+.content-1LZD8, .footer-2vbHR, .content-1LZD8 {
+  background-color: var(--bgc2) !important;
+}
+.title-278Hm {
+  color: #4f4dd2 !important;
+}
+
 /* CCW 创造者学院 */
+
 .gh-head {
   background-color: var(--bgc1) !important;
 }
