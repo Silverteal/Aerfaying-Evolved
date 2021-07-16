@@ -701,21 +701,6 @@ label {
   color: #fff !important;
   background-color: #1e2227 !important;
 }
-.stat-graph_day-0_idJxi {
-  background-color: #282d34 !important;
-}
-.stat-graph_day-1_3GeeK {
-  background-color: #2d3c51 !important;
-}
-.stat-graph_day-2_WowYZ {
-  background-color: #35537d !important;
-}
-.stat-graph_day-3_36etr {
-  background-color: #3c69a8 !important;
-}
-.stat-graph_day-4_3XS42 {
-  background-color: #4c97ff !important;
-}
 blockquote {
   border-left: 5px solid #1d2026 !important;
 }
@@ -1458,12 +1443,12 @@ a {
 }
 `);
   }
-  $(
-    "[src='https://cdn.gitblock.cn/static/images/776e7636933f5be6ab8bd9eb5334ba3d.png']"
-  ).attr(
-    "src",
-    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY/j//z8DAAj8Av6IXwbgAAAAAElFTkSuQmCC"
-  );
+  // $(
+  //   "[src='https://cdn.gitblock.cn/static/images/776e7636933f5be6ab8bd9eb5334ba3d.png']"
+  // ).attr(
+  //   "src",
+  //   "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY/j//z8DAAj8Av6IXwbgAAAAAElFTkSuQmCC"
+  // );
 
   if (url.search("/Users") != -1) {
     console.log("In user home, verify redlist");
