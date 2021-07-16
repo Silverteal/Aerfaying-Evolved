@@ -1351,6 +1351,31 @@ ul.dropdown-menu{
 .title-278Hm {
   color: #4f4dd2 !important;
 }
+.worksMainInfoCtn-2iRz3,
+.stage-header_stage-menu-wrapper_15JJt,
+.stage-header_playerOnly_35dpv,
+.monitor_default-monitor_2vCcZ,
+.stage-header_stage-header-wrapper-overlay_5vfJa,
+.stage-wrapper_stage-wrapper_2bejr,
+.stage-wrapper_full-screen_2hjMb,
+.info-3SIDw {
+  background-color: var(--bgc2) !important;
+}
+.title-1M2qA {
+  color: #4f4dd2 !important;
+}
+.right-3rAky :first-child {
+  color: #4f4dd2 !important;
+}
+.viewAll-3bwLg {
+  background-image: linear-gradient(270.2deg, var(--bgc2) 0.09%, var(--bgc2a) 63.78%, var(--bgc2a) 74.32%, var(--bgc2a) 88.55%);
+}
+.container-1eeXt {
+  background-color: var(--bgc2) !important;
+}
+.disabledTips-1WKSG {
+  color: #000 !important;
+}
 
 /* CCW 创造者学院 */
 
