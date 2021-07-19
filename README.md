@@ -5,7 +5,15 @@
     </div>
 </h1>
 
+<center>  
+
+[简体中文](https://aerfaying.com/Studios/24622/Forum/PostView?postId=6407) | [English](https://github.com/Tim-Fang/Dark-Aerfaying-Theme/)
+
+***
+
 A tool to modify the theme of the aerfaying community website.
+
+</center>
 
 ![Preview #1](https://raw.githubusercontent.com/Tim-Fang/Dark-Aerfaying-Theme/master/images/ss1.png)
 ![Preview #2](https://raw.githubusercontent.com/Tim-Fang/Dark-Aerfaying-Theme/master/images/ss2.png)
@@ -15,4 +23,8 @@ Currently in development, only support partal dark theme.
 
 ## Installation
 
-You need to install a user script loader like Tampermonkey or Greasymonkey, then [Install userscript here](https://github.com/Tim-Fang/Dark-Aerfaying-Theme/raw/master/Dark%20Aerfaying.user.js)
+You need to install a user script loader like [Tampermonkey](https://www.tampermonkey.net/) or Greasymonkey, then [Install userscript here](https://github.com/Tim-Fang/Dark-Aerfaying-Theme/raw/master/Dark%20Aerfaying.user.js)
+
+## Development  
+
+This project is open source on [GitHub](https://github.com/Tim-Fang/Dark-Aerfaying-Theme/), welcome to put forward your suggestion
