@@ -9,11 +9,12 @@
 
 [简体中文](https://aerfaying.com/Studios/24622/Forum/PostView?postId=6407) | English
 
+</center>
+
 ***
 
 A tool to modify the theme of the aerfaying community website.
 
-</center>
 
 ![Preview #1](https://raw.githubusercontent.com/Tim-Fang/Dark-Aerfaying-Theme/master/images/ss1.png)
 ![Preview #2](https://raw.githubusercontent.com/Tim-Fang/Dark-Aerfaying-Theme/master/images/ss2.png)
