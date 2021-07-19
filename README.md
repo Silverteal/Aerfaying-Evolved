@@ -7,7 +7,7 @@
 
 <center>  
 
-[简体中文](https://aerfaying.com/Studios/24622/Forum/PostView?postId=6407) | [English](https://github.com/Tim-Fang/Dark-Aerfaying-Theme/)
+[简体中文](https://aerfaying.com/Studios/24622/Forum/PostView?postId=6407) | English
 
 ***
 
