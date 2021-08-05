@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Dark Aerfaying
 // @namespace    https://github.com/Tim-Fang
-// @version      2.1
+// @version      2.2
 // @description  Dark Aerfaying Theme User JS
 // @author       TimFang4162
 // @match        *://*.aerfaying.com/*
@@ -1475,4 +1475,27 @@ a {
     };
     libraLib.isInList(url.split("/")[4]);
   }
+  const COMMENT_ID_CLASS = 'stevexmh_comment_id';
+  const COMMENT_CLASS = 'comment_comment_P_hgY';
+  GM_addStyle(`
+    .${COMMENT_CLASS}:hover .${COMMENT_ID_CLASS} {
+      display: inline;
+    };
+    .${COMMENT_CLASS} .${COMMENT_ID_CLASS} {
+      display: none;
+      color: #888;
+      margin: 0 0.5rem;
+    };
+    `);
+  setInterval(() => {
+    const comments = $('.' + COMMENT_CLASS);
+    comments.each(function () {
+      const cidel = $('.' + COMMENT_ID_CLASS, this);
+      if (cidel.length === 0) {
+        const commentId = this.id;
+        // > div.comment_info_2Sjc0 > div:nth-child(2)
+        $('> div.comment_info_2Sjc0 > div:nth-child(2)', this).append(`<a href="${location.pathname}#commentId=${commentId}" class="${COMMENT_ID_CLASS}">#${commentId}</span>`);
+      }
+    });
+  }, 5000);
 })();
