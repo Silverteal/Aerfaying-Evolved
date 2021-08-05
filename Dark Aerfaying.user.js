@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Dark Aerfaying
 // @namespace    https://github.com/Tim-Fang
-// @version      2.3
+// @version      2.4
 // @description  Dark Aerfaying Theme User JS
 // @author       TimFang4162
 // @match        *://*.aerfaying.com/*
@@ -1111,6 +1111,21 @@ ul.dropdown-menu{
   background-color: var(--bgc2) !important;
   width: 65% !important;
 }
+.stat-graph_day-0_idJxi {
+  background-color: #282d34 !important;
+}
+.stat-graph_day-1_3GeeK {
+  background-color: #2d3c51 !important;
+}
+.stat-graph_day-2_WowYZ {
+  background-color: #35537d !important;
+}
+.stat-graph_day-3_36etr {
+  background-color: #3c69a8 !important;
+}
+.stat-graph_day-4_3XS42 {
+  background-color: #4c97ff !important;
+}
 
 
 
@@ -1443,12 +1458,7 @@ a {
 }
 `);
   }
-  // $(
-  //   "[src='https://cdn.gitblock.cn/static/images/776e7636933f5be6ab8bd9eb5334ba3d.png']"
-  // ).attr(
-  //   "src",
-  //   "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY/j//z8DAAj8Av6IXwbgAAAAAElFTkSuQmCC"
-  // );
+
 
   if (url.search("/Users") != -1) {
     console.log("In user home, verify redlist");
@@ -1475,6 +1485,7 @@ a {
     };
     libraLib.isInList(url.split("/")[4]);
   }
+
   const COMMENT_ID_CLASS = 'dat_comment_id';
   const COMMENT_CLASS = 'comment_comment_P_hgY';
   GM_addStyle(`
@@ -1491,13 +1502,27 @@ a {
     };
     `);
   setInterval(() => {
-    const comments = $('.' + COMMENT_CLASS);
+    var comments = $('.' + COMMENT_CLASS);
     comments.each(function () {
-      const cidel = $('.' + COMMENT_ID_CLASS, this);
+      var cidel = $('.' + COMMENT_ID_CLASS, this);
       if (cidel.length === 0) {
-        const commentId = this.id;
-        $('> div.comment_info_2Sjc0 > div:nth-child(2)', this).append(` <a href="${location.pathname}#commentId=${commentId}" class="${COMMENT_ID_CLASS}">#${commentId}</a>`);
+        var commentId = this.id;
+        $('> div.comment_info_2Sjc0 > div:nth-child(2)', this).append(
+          ` <a href="` + location.pathname + `#commentId=` + commentId + `" class="` + COMMENT_ID_CLASS + `">#` + commentId + `</a>`);
       }
     });
   }, 2500);
+  var interval = 2500;
+  setInterval(() => {
+    intervalFunc();
+  }, interval);
+  function intervalFunc() {
+    //定时事件
+    $(
+      "[src='https://cdn.gitblock.cn/static/images/776e7636933f5be6ab8bd9eb5334ba3d.png']"
+    ).attr(
+      "src",
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY/j//z8DAAj8Av6IXwbgAAAAAElFTkSuQmCC"
+    );
+  }
 })();
