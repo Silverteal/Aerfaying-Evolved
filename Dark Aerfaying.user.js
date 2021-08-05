@@ -1475,16 +1475,19 @@ a {
     };
     libraLib.isInList(url.split("/")[4]);
   }
-  const COMMENT_ID_CLASS = 'stevexmh_comment_id';
+  const COMMENT_ID_CLASS = 'dat_comment_id';
   const COMMENT_CLASS = 'comment_comment_P_hgY';
   GM_addStyle(`
-    .${COMMENT_CLASS}:hover .${COMMENT_ID_CLASS} {
+    .${COMMENT_ID_CLASS} {
       display: inline;
-    };
-    .${COMMENT_CLASS} .${COMMENT_ID_CLASS} {
-      display: none;
-      color: #888;
+      color: #888888;
       margin: 0 0.5rem;
+      font-size: 12px;
+      transition: color 0.1s ease;
+    };
+    .${COMMENT_ID_CLASS}:hover {
+      color: #4C97FF !important;
+      transition: color 0.1s ease;
     };
     `);
   setInterval(() => {
@@ -1493,9 +1496,8 @@ a {
       const cidel = $('.' + COMMENT_ID_CLASS, this);
       if (cidel.length === 0) {
         const commentId = this.id;
-        // > div.comment_info_2Sjc0 > div:nth-child(2)
-        $('> div.comment_info_2Sjc0 > div:nth-child(2)', this).append(`<a href="${location.pathname}#commentId=${commentId}" class="${COMMENT_ID_CLASS}">#${commentId}</span>`);
+        $('> div.comment_info_2Sjc0 > div:nth-child(2)', this).append(` <a href="${location.pathname}#commentId=${commentId}" class="${COMMENT_ID_CLASS}">#${commentId}</a>`);
       }
     });
-  }, 5000);
+  }, 2500);
 })();
