@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Dark Aerfaying
 // @namespace    https://github.com/Tim-Fang
-// @version      2.2
+// @version      2.3
 // @description  Dark Aerfaying Theme User JS
 // @author       TimFang4162
 // @match        *://*.aerfaying.com/*
