@@ -6,7 +6,9 @@
 // @author       TimFang4162
 // @match        *://*.aerfaying.com/*
 // @match        *://*.gitblock.cn/*
+// @match        *://*.3eworld.cn/*
 // @match        *://*.ccw.site/*
+// @match        *://*.codingclip.com/*
 // @grant        GM_addStyle
 // @grant        GM_setValue
 // @grant        GM_getValue
@@ -807,6 +809,9 @@ ul.menu-bar_main-nav_97WYO li a:hover {
 .blocks_blocks_2LOZ2 .blocklyFlyout {
   backdrop-filter: blur(10px) saturate(2) !important;
 }
+.blocklyFlyout {
+  outline: none!important;
+}
 .action-menu_button_31je5 {
   background: var(--bgc1) !important;
 }
@@ -1388,6 +1393,50 @@ ul.dropdown-menu{
 .gh-head-student-info-name {
   color: var(--textc) !important;
 }
+
+/* ClipCC */
+
+
+.stage_stage-wrapper-overlay_fmZuD {
+  background-color: var(--bgc1a) !important;
+  backdrop-filter: var(--bgf) !important;
+}
+.library_library-scroll-grid_1jyXm {
+  background: var(--bgc1); !important
+}
+.library_filter-bar_1W0DW {
+  background-color: var(--bgc2) !important;
+}
+.library-item_library-item_1DcMO {
+  color: var(--textc) !important;
+  background: var(--bgc2) !important;
+}
+.filter_filter_1JFal {
+  background: var(--bgc1) !important;
+}
+.filter_filter-input_1iiEt::placeholder {
+  color: var(--textc) !important;
+}
+.asset-panel_wrapper_366X0 {
+  background: var(--bgc2) !important;
+}
+.selector_wrapper_8_BHs {
+  background: var(--bgc2) !important;
+}
+.selector_new-buttons_2qHDd::before {
+  background: linear-gradient(#e8edf100,var(--bgc1)) !important;
+}
+.blocklyMainBackground {
+  fill: var(--bgc1) !important;
+}
+.sprite-selector-item_sprite-selector-item_kQm-i.sprite-selector-item_is-selected_24tQj {
+  background: var(--bgc2) !important;
+}
+.sprite-selector-item_sprite-selector-item_kQm-i:hover {
+  background: var(--bgc2) !important;
+}
+
+
 `);
   var url = window.location.href;
   if (GM_getValue("DAT_domain", null) == null) {
@@ -1525,4 +1574,8 @@ a {
       "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY/j//z8DAAj8Av6IXwbgAAAAAElFTkSuQmCC"
     );
   }
+
+
+  
 })();
+
