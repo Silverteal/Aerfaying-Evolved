@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Dark Aerfaying
 // @namespace    https://github.com/Tim-Fang
-// @version      2.5
+// @version      2.6
 // @description  Dark Aerfaying Theme User JS
 // @author       TimFang4162
 // @match        *://*.aerfaying.com/*
@@ -1438,6 +1438,43 @@ ul.dropdown-menu{
 
 
 `);
+  //================== Global Func =====================
+  $("body").prepend(`
+<script>function dat_alert(title,name,useTime,markdown) {
+        $("body").after(\`
+<div class="ReactModalPortal" id="DAT_AlertWindow">
+    <div class="ReactModal__Overlay ReactModal__Overlay--after-open modal_modal-overlay_2_Dgx" aria-modal="true">
+        <div class="ReactModal__Content ReactModal__Content--after-open modal_modal-content_3brCX" tabindex="-1">
+            <div class="box_box_tWy-0" style="flex-direction: column; flex-grow: 1;">
+                <div class="modal_header_1dNxf" style="height: 3.125rem;">
+                    <div class="modal_header-item_1WbOm modal_header-item-title_1N2BE">\`+title+\`</div>
+                    <div class="modal_header-item_1WbOm modal_header-item-close_4akWi">
+                        <div aria-label="Close" class="close-button_close-button_t5jqt close-button_large_2cCrv"
+                            role="button" tabindex="0" onclick="$('#DAT_AlertWindow').remove();"><img
+                                class="close-button_close-icon_ywCI5"
+                                src="https://cdn.gitblock.cn/static/images/cb666b99d3528f91b52f985dfb102afa.svg"></div>
+                    </div>
+                </div>
+                <div class="body box_box_tWy-0">
+                    <div class="item-attached-thin-modal-body_wrapper_3KdPz">
+                        <div>
+                            <h1 class="item-attached-thin-modal-body_name_p9cDj">\`+name+\`</h1>
+                            <div><span>\`+useTime+\`</span></div>
+                        </div>
+                    </div>
+                    <div class="markdown_body_1wo0f item-isolator-modal_declarationDescp_2g62z">
+                        <div class="content">
+                            \`+markdown+\`
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>\`);
+    }
+</script>`);
+  //================== Domain Redirect =====================
   var url = window.location.href;
   if (GM_getValue("DAT_domain", null) == null) {
     if (url.search("gitblock.cn") != -1) {
@@ -1447,7 +1484,7 @@ ul.dropdown-menu{
       GM_setValue("DAT_domain", "aerfaying");
     }
   }
-  console.log(GM_listValues());
+  //console.log(GM_listValues());
   if (GM_getValue("DAT_domain") == "aerfaying") {
     if (url.search("gitblock.cn") != -1) {
       window.location.assign(window.location.href.replace("gitblock.cn", "aerfaying.com"));
@@ -1458,8 +1495,9 @@ ul.dropdown-menu{
       window.location.assign(window.location.href.replace("aerfaying.com", "gitblock.cn"));
     }
   }
+  //================== Report Center =====================
   if (url.search("/Admin/Reports") != -1) {
-    console.log("In report center, add css");
+    //console.log("In report center, add css");
     GM_addStyle(`;
 .user-info_wrapper_2acbL {
   color: #eee !important;
@@ -1508,9 +1546,10 @@ a {
 `);
   }
 
+  //================== Redlist =====================
 
   if (url.search("/Users") != -1) {
-    console.log("In user home, verify redlist");
+    //console.log("In user home, verify redlist");
     var libraLib = {
       isInList: function (id) {
         $.ajax({
@@ -1522,7 +1561,7 @@ a {
             value: id,
           },
           success: function (result) {
-            console.log(result);
+            //console.log(result);
             if (result["message"] == "success") {
               if (result["status"] == true) {
                 alert("此人在红名单中,原因是:\n" + result["reason"]);
@@ -1534,6 +1573,8 @@ a {
     };
     libraLib.isInList(url.split("/")[4]);
   }
+
+  //================== Comment ID =====================
 
   const COMMENT_ID_CLASS = 'dat_comment_id';
   const COMMENT_CLASS = 'comment_comment_P_hgY';
@@ -1561,11 +1602,14 @@ a {
       }
     });
   }, 2500);
-  var interval = 2500;
+
+  //================== ActionStat =====================
+
   setInterval(() => {
-    intervalFunc();
-  }, interval);
-  function intervalFunc() {
+    intervalFunc_actionStat();
+  }, 2500);
+
+  function intervalFunc_actionStat() {
     //定时事件
     $(
       "[src='https://cdn.gitblock.cn/static/images/776e7636933f5be6ab8bd9eb5334ba3d.png']"
@@ -1575,7 +1619,28 @@ a {
     );
   }
 
+  //================== View Markdown =====================
 
-  
+  setInterval(() => {
+    intervalFunc_ViewMarkdown();
+  }, 2500);
+
+  function intervalFunc_ViewMarkdown() {
+    if ($(".panel2_panelHead_1Bn6y.panel-head:contains('个人简介')").length != 0 && $("#dat_viewmd").length == 0) {
+      $(".panel2_panelHead_1Bn6y.panel-head:contains('个人简介')").children("h2").append(`
+<a id="dat_viewmd">Markdown</a>`);
+      $("#dat_viewmd").click(function (e) {
+        var uid = url.split("/")[4];
+        $.ajax({
+          url: "/WebApi/Users/" + uid + "/Get",
+          type: "POST",
+          async: false,
+          success: function (result) {
+            var markdown = "<pre><code>" + result.user.abstract.replace(/\n/g, "</br>") + "</code></pre>";
+            dat_alert("Markdown 原文", result.user.username, "#" + uid, markdown);
+          },
+        });
+      })
+    }
+  }
 })();
-
