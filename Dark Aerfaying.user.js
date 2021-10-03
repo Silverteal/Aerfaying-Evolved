@@ -58,5 +58,5 @@
   }, 2500);
 
   function intervalFunc_ViewMarkdown() {
-    dat_alert("请更新您的Aerfaying Evolved!","您当前使用的Aerfaying Evolved是旧版本","旧版本由于命名问题已停止使用","请点击<a href=\"https://raw.fastgit.org/Silverteal/Aerfaying-Evolved/master/Tampermonkey/Aerfaying%20Evolved.user.js\">此处</a>下载新版本的Aerfaying Evolved!")
+    dat_alert("请更新您的Aerfaying Evolved!","您当前使用的Aerfaying Evolved是旧版本","旧版本由于命名问题已停止使用","请点击<a href=\"https://raw.fastgit.org/Silverteal/Aerfaying-Evolved/master/Tampermonkey/Aerfaying%20Evolved.user.js\">此处</a>下载新版本的Aerfaying Evolved，并删除旧版本您正在使用的Aerfaying Evolved!")
   };
