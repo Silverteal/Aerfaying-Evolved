@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name         Aerfaying Evolved
-// @namespace    https://github.com/Tim-Fang
-// @version      2.6-Fork2
+// @namespace    https://github.com/Silverteal/Aerfaying-Evolved
+// @version      2.6-Fork3
 // @description  Aerfaying Evolved User JS
 // @author       TimFang4162
+// @author       Silverteal
 // @match        *://*.aerfaying.com/*
 // @match        *://*.gitblock.cn/*
 // @match        *://*.3eworld.cn/*
