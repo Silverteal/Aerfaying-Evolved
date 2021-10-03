@@ -5,4 +5,4 @@
 
 ||aerfaying.com/WebApi/Projects/GetAdRandomList$xhr,1p,rewrite=abp-resource:blank-text
 ||gitblock.cn/WebApi/Projects/GetAdRandomList$xhr,1p,rewrite=abp-resource:blank-text
-||3eworld.cn/WebApi/Projects/GetAdRandomList$xhr,1pr,ewrite=abp-resource:blank-text
+||3eworld.cn/WebApi/Projects/GetAdRandomList$xhr,1pr,rewrite=abp-resource:blank-text
