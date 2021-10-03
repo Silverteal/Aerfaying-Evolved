@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Dark Aerfaying
+// @name         Aerfaying Evolved
 // @namespace    https://github.com/Tim-Fang
-// @version      2.6
-// @description  Dark Aerfaying Theme User JS
+// @version      2.6-Fork1
+// @description  Aerfaying Evolved User JS
 // @author       TimFang4162
 // @match        *://*.aerfaying.com/*
 // @match        *://*.gitblock.cn/*
@@ -13,7 +13,7 @@
 // @grant        GM_setValue
 // @grant        GM_getValue
 // @grant        GM_listValues
-// @updateURL    https://github.com/Tim-Fang/Dark-Aerfaying-Theme/raw/master/Dark%20Aerfaying.user.js
+// @updateURL    https://github.com/Silverteal/Aerfaying-Evolved/raw/master/Dark%20Aerfaying.user.js
 // @require      https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js
 // ==/UserScript==
 
@@ -143,7 +143,7 @@ a {
             //console.log(result);
             if (result["message"] == "success") {
               if (result["status"] == true) {
-                alert("此人在红名单中,原因是:\n" + result["reason"]);
+                alert("请注意：此人在红名单中,原因是:\n" + result["reason"]);
               }
             }
           },
