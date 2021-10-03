@@ -1,8 +1,11 @@
 ! Homepage: https://github.com/Silverteal/Aerfaying-Evolved
 ! Title: 阿儿法营奥灰暴力屏蔽
-! Version: 20211003174600009313
+! Version: 20211003201000009313
 ! 此规则为实验性质
 
-||aerfaying.com/WebApi/Projects/GetAdRandomList$xhr,1p,rewrite=abp-resource:blank-text
-||gitblock.cn/WebApi/Projects/GetAdRandomList$xhr,1p,rewrite=abp-resource:blank-text
-||3eworld.cn/WebApi/Projects/GetAdRandomList$xhr,1pr,rewrite=abp-resource:blank-text
+||aerfaying.com/WebApi/Projects/GetAdRandomList$xhr,1p
+||gitblock.cn/WebApi/Projects/GetAdRandomList$xhr,1p
+||3eworld.cn/WebApi/Projects/GetAdRandomList$xhr,1p
+aerfaying.com##.alerter_alert_3z7bJ
+gitblock.cn##.alerter_alert_3z7bJ
+3eworld.cn##.alerter_alert_3z7bJ
