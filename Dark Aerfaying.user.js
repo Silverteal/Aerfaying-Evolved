@@ -1,19 +1,17 @@
 // ==UserScript==
 // @name         Aerfaying Evolved
 // @namespace    https://github.com/Tim-Fang
-// @version      2.6-Fork1
+// @version      2.6-Fork2
 // @description  Aerfaying Evolved User JS
 // @author       TimFang4162
 // @match        *://*.aerfaying.com/*
 // @match        *://*.gitblock.cn/*
 // @match        *://*.3eworld.cn/*
-// @match        *://*.ccw.site/*
-// @match        *://*.codingclip.com/*
 // @grant        GM_addStyle
 // @grant        GM_setValue
 // @grant        GM_getValue
 // @grant        GM_listValues
-// @updateURL    https://github.com/Silverteal/Aerfaying-Evolved/raw/master/Dark%20Aerfaying.user.js
+// @updateURL    https://raw.fastgit.org/Silverteal/Aerfaying-Evolved/master/Dark%20Aerfaying.user.js
 // @require      https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js
 // ==/UserScript==
 
@@ -181,22 +179,6 @@ a {
       }
     });
   }, 2500);
-
-  //================== ActionStat =====================
-
-  setInterval(() => {
-    intervalFunc_actionStat();
-  }, 2500);
-
-  function intervalFunc_actionStat() {
-    //定时事件
-    $(
-      "[src='https://cdn.gitblock.cn/static/images/776e7636933f5be6ab8bd9eb5334ba3d.png']"
-    ).attr(
-      "src",
-      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAFoEvQfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAANSURBVBhXY/j//z8DAAj8Av6IXwbgAAAAAElFTkSuQmCC"
-    );
-  }
 
   //================== View Markdown =====================
 
