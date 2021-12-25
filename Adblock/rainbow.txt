@@ -1,7 +1,7 @@
 ! Homepage: https://github.com/Silverteal/Aerfaying-Evolved
-! Title: 彩虹消息框（测试）
-! Version: 20211225082300009313
-! 此规则为实验性质，全部规则由zengyl从https://aerfaying.com/Studios/24622/Forum/PostView?postId=7523提供
+! Title: 阿儿法营消息栏发光
+! Version: 20211225082900009313
+! 全部规则由zengyl从https://aerfaying.com/Studios/24622/Forum/PostView?postId=7523提供
 
 gitblock.cn##div.user-messages_card_2ITqW:style(--color: #2D8B;)
 gitblock.cn##div.user-messages_card_2ITqW:has-text(/喜欢你的作品【.*?】/):style(--color: #D54C;)
