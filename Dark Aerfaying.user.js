@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Dark Aerfaying
 // @namespace    https://github.com/Tim-Fang
-// @version      2.6
+// @version      2.7
 // @description  Dark Aerfaying Theme User JS
 // @author       TimFang4162
 // @match        *://*.aerfaying.com/*
@@ -1598,7 +1598,7 @@ a {
       if (cidel.length === 0) {
         var commentId = this.id;
         $('> div.comment_info_2Sjc0 > div:nth-child(2)', this).append(
-          ` <a href="` + location.pathname + `#commentId=` + commentId + `" class="` + COMMENT_ID_CLASS + `">#` + commentId + `</a>`);
+          ` <a href="` + location.pathname + location.search + `#commentId=` + commentId + `" class="` + COMMENT_ID_CLASS + `">#` + commentId + `</a>`);
       }
     });
   }, 2500);
