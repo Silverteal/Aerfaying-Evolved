@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Aerfaying Evolved
 // @namespace    https://github.com/Silverteal/Aerfaying-Evolved
-// @version      2.6-Fork3
+// @version      2.6-Fork4
 // @description  Aerfaying Evolved User JS
 // @author       TimFang4162
 // @author       Silverteal
@@ -176,7 +176,7 @@ a {
       if (cidel.length === 0) {
         var commentId = this.id;
         $('> div.comment_info_2Sjc0 > div:nth-child(2)', this).append(
-          ` <a href="` + location.pathname + `#commentId=` + commentId + `" class="` + COMMENT_ID_CLASS + `">#` + commentId + `</a>`);
+          ` <a href="` + location.pathname + location.search + `#commentId=` + commentId + `" class="` + COMMENT_ID_CLASS + `">#` + commentId + `</a>`);
       }
     });
   }, 2500);
