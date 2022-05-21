@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Aerfaying Evolved
 // @namespace    https://github.com/Silverteal/Aerfaying-Evolved
-// @version      2.6-Fork4
-// @description  Aerfaying Evolved User JS
+// @version      2.6-Fork5
+// @description  用于增强阿儿法营部分功能的用户脚本
 // @author       TimFang4162
 // @author       Silverteal
 // @match        *://*.aerfaying.com/*
