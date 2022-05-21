@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Aerfaying Evolved
 // @namespace    https://github.com/Silverteal/Aerfaying-Evolved
-// @version      2.6-Fork5
+// @version      2.6-Fork6
 // @description  用于增强阿儿法营部分功能的用户脚本
 // @author       TimFang4162
 // @author       Silverteal
@@ -122,34 +122,6 @@ a {
   display: none !important;
 }
 `);
-  }
-
-  //================== Redlist =====================
-
-  if (url.search("/Users") != -1) {
-    //console.log("In user home, verify redlist");
-    var libraLib = {
-      isInList: function (id) {
-        $.ajax({
-          url: "https://www.scpo.top:1120/v2",
-          data: {
-            method: "isInList",
-            platform: "acamp",
-            format: "id",
-            value: id,
-          },
-          success: function (result) {
-            //console.log(result);
-            if (result["message"] == "success") {
-              if (result["status"] == true) {
-                alert("请注意：此人在红名单中,原因是:\n" + result["reason"]);
-              }
-            }
-          },
-        });
-      },
-    };
-    libraLib.isInList(url.split("/")[4]);
   }
 
   //================== Comment ID =====================
